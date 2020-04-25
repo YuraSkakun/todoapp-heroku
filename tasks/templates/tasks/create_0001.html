@@ -1,0 +1,14 @@
+{% extends "tasks/base.html" %}
+
+
+{% block title %}Создать задачу{% endblock%}
+       
+  
+{% block main_content %}
+  <h1>Создать задачу</h1>
+  <form action="/tasks/add-task/" method="post">
+  	{% csrf_token %}
+    <input type="text" name="description" class="form-control"/>
+    <button class="add" type="submit">+</button>
+  </form>
+{% endblock %} 
